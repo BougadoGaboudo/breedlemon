@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "Breedlemon",
-  description: "Planifie et organise tes breeds Pokémon !",
+  description: "Planifie et organise tes breeds Pokémon sur le serveur Minecraft Cobblemon PlasmaCube !",
 };
 
 export default function RootLayout({
@@ -21,6 +22,7 @@ export default function RootLayout({
         </header>
         <main className="max-w-7xl mx-auto w-full min-h-[81vh]">{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
