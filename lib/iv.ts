@@ -1,5 +1,5 @@
 import { stats } from "@/data/stats";
-import { ChildIVs, ParentPokemon } from "@/types";
+import { ChildIVs, IVs, ParentPokemon } from "@/types";
 
 export function calculateChildIVs(parent1: ParentPokemon, parent2: ParentPokemon): ChildIVs {
   const result = {} as ChildIVs;
@@ -22,4 +22,8 @@ export function calculateChildIVs(parent1: ParentPokemon, parent2: ParentPokemon
   }
 
   return result;
+}
+
+export function childIVsToIVs(childIVs: ChildIVs): IVs {
+  return Object.fromEntries(stats.map((stat) => [stat, childIVs[stat].value])) as IVs;
 }

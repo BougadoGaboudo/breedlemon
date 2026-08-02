@@ -13,7 +13,7 @@ export function isCompleteParent(draft: ParentPokemonDraft): draft is ParentPoke
   return draft.speciesId !== undefined && draft.gender !== undefined;
 }
 
-function resolveBaseForm(species: PokemonSpecies, allSpecies: PokemonSpecies[]): number {
+export function resolveBaseForm(species: PokemonSpecies, allSpecies: PokemonSpecies[]): number {
   return allSpecies.find((s) => s.id === species.baseFormId)?.id ?? species.id;
 }
 
@@ -26,11 +26,16 @@ export function checkBreedingCompatibility(
   species2: PokemonSpecies,
   allSpecies: PokemonSpecies[],
 ): CompatibilityResult {
-  if (!species1.isBreedable || !species2.isBreedable) return { canBreed: false, reason: "not_breedable" };
-  if (parent1.fertility <= 0 || parent2.fertility <= 0) return { canBreed: false, reason: "fertility_zero" };
-
   const isDitto1 = species1.id === DITTO_ID;
   const isDitto2 = species2.id === DITTO_ID;
+
+  if (!isDitto1 && !isDitto2 && (!species1.isBreedable || !species2.isBreedable)) {
+    return { canBreed: false, reason: "not_breedable" };
+  }
+
+  if (parent1.fertility <= 0 || parent2.fertility <= 0) {
+    return { canBreed: false, reason: "fertility_zero" };
+  }
 
   if (isDitto1 && isDitto2) return { canBreed: false, reason: "ditto_x_ditto" };
 
@@ -60,4 +65,8 @@ export function getEligibleMateSpecies(chosenSpecies: PokemonSpecies, allSpecies
     if (s.id === DITTO_ID) return chosenSpecies.canBreedWithDitto;
     return s.eggGroups.some((g) => chosenSpecies.eggGroups.includes(g));
   });
+}
+
+export function isDitto(species: PokemonSpecies): boolean {
+  return species.eggGroups.includes("ditto");
 }
