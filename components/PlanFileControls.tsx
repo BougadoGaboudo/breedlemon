@@ -32,7 +32,7 @@ export function PlanFileControls() {
   };
 
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex items-center gap-2 flex-col md:flex-row">
       <SecondaryButton onClick={handleExport}>Exporter</SecondaryButton>
       <PrimaryButton onClick={() => fileInputRef.current?.click()}>Importer</PrimaryButton>
 

@@ -1,8 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { PlanFileControls } from "./PlanFileControls";
 import { useState } from "react";
+import Link from "next/link";
+import { SaveFileControls } from "./SaveFileControls";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,9 +12,27 @@ export default function Navbar() {
     <nav className="max-w-7xl mx-auto flex justify-between items-center gap-4 py-3">
       <Image src="/images/logo.png" alt="Logo" width={895} height={327} className="w-40 h-auto" />
 
-      <div className="hidden md:flex">
-        <PlanFileControls />
-      </div>
+      <ul className="hidden md:flex md:items-center">
+        <li>
+          <Link href="/" className="px-4 py-2 transition-all duration-250 ease-out hover:text-primary-500">
+            Accueil
+          </Link>
+        </li>
+        <li>
+          <Link href="/tree" className="px-4 py-2 mr-4 transition-all duration-250 ease-out hover:text-primary-500">
+            Arbre
+          </Link>
+        </li>
+        <li>
+          <Link href="/inventory" className="px-4 py-2 transition-all duration-250 ease-out hover:text-primary-500">
+            Inventaire
+          </Link>
+        </li>
+
+        <li>
+          <SaveFileControls />
+        </li>
+      </ul>
       <button
         type="button"
         className="mx-4 group cursor-pointer relative z-60 flex h-10 w-10 items-center justify-center md:hidden"
@@ -41,9 +60,21 @@ export default function Navbar() {
         />
       </button>
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex flex-col items-center justify-center gap-6 bg-dark-500/75 text-light md:hidden">
-          <PlanFileControls />
-        </div>
+        <ul className="fixed inset-0 z-50 flex flex-col items-center justify-center gap-6 bg-dark-500/90 text-light-500 md:hidden">
+          <li>
+            <Link href="/">Accueil</Link>
+          </li>
+          <li>
+            <Link href="/tree">Arbre</Link>
+          </li>
+          <li>
+            <Link href="/inventory">Inventaire</Link>
+          </li>
+
+          <li>
+            <SaveFileControls />
+          </li>
+        </ul>
       )}
     </nav>
   );
