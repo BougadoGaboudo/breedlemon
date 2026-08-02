@@ -38,3 +38,4 @@ export const eggGroupLabels: Record<string, string> = {
 
 export const defaultIVs: Record<Stat, number> = Object.fromEntries(stats.map((s) => [s, 0])) as Record<Stat, number>;
 export const defaultFertility = 4;
+export const maxIV = 31;
