@@ -19,12 +19,15 @@ export default function Navbar() {
           </Link>
         </li>
         <li>
-          <Link href="/tree" className="px-4 py-2 mr-4 transition-all duration-250 ease-out hover:text-primary-500">
+          <Link href="/tree" className="px-4 py-2 transition-all duration-250 ease-out hover:text-primary-500">
             Arbre
           </Link>
         </li>
         <li>
-          <Link href="/inventory" className="px-4 py-2 transition-all duration-250 ease-out hover:text-primary-500">
+          <Link
+            href="/inventory"
+            className="px-4 py-2 mr-4 transition-all duration-250 ease-out hover:text-primary-500"
+          >
             Inventaire
           </Link>
         </li>
