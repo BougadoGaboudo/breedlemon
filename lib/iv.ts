@@ -18,7 +18,7 @@ export function calculateChildIVs(parent1: ParentPokemon, parent2: ParentPokemon
     }
 
     result[stat] =
-      iv1 === iv2 ? { value: iv1, source: "matching" } : { value: Math.round((iv1 + iv2) / 2), source: "average" };
+      iv1 === iv2 ? { value: iv1, source: "matching" } : { value: Math.floor((iv1 + iv2) / 2), source: "average" };
   }
 
   return result;
