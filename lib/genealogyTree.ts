@@ -45,6 +45,24 @@ export function createEmptyTree(targetIvCount: number): GenealogyTree {
   return tree;
 }
 
+export function resizeTree(oldTree: GenealogyTree, newTargetIvCount: number): GenealogyTree {
+  const newTree = createEmptyTree(newTargetIvCount);
+  const diff = oldTree.length - newTree.length;
+
+  if (diff >= 0) {
+    for (let k = 0; k < newTree.length; k++) {
+      newTree[k] = oldTree[k + diff].map((slot) => ({ ...slot }));
+    }
+  } else {
+    const shift = -diff;
+    for (let k = shift; k < newTree.length; k++) {
+      newTree[k] = oldTree[k - shift].map((slot) => ({ ...slot }));
+    }
+  }
+
+  return newTree;
+}
+
 export function getSiblingSlotIndex(slotIndex: number): number {
   return slotIndex % 2 === 0 ? slotIndex + 1 : slotIndex - 1;
 }

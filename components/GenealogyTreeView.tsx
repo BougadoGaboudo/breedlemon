@@ -13,6 +13,7 @@ import { TreeCard } from "./TreeCard";
 import { useTreeBreed } from "@/hooks/useTreeBreed";
 import { InventoryCardModal } from "./InventoryCardModal";
 import { ModalOverlay } from "./ModalOverlay";
+import { TreeControls } from "./TreeControls";
 
 const NODE_WIDTH = 300;
 const NODE_HEIGHT = 140;
@@ -21,11 +22,14 @@ type SelectedSlot = { genIndex: number; slotIndex: number };
 
 export function GenealogyTreeView({ allSpecies }: { allSpecies: PokemonSpecies[] }) {
   const tree = useGenealogyTreeStore((s) => s.tree);
+  const targetIvCount = useGenealogyTreeStore((s) => s.targetIvCount);
+  const setTargetIvCount = useGenealogyTreeStore((s) => s.setTargetIvCount);
   const assignSlot = useGenealogyTreeStore((s) => s.assignSlot);
   const entries = useInventoryStore((s) => s.entries);
   const addEntry = useInventoryStore((s) => s.addEntry);
   const { breedSlot, canBreedSlot } = useTreeBreed(allSpecies);
 
+  const [orientation, setOrientation] = useState<"horizontal" | "vertical">("horizontal");
   const [selectedSlot, setSelectedSlot] = useState<SelectedSlot | null>(null);
   const [creatingEntryId, setCreatingEntryId] = useState<string | null>(null);
   const currentSlotEntryId = selectedSlot
@@ -67,11 +71,11 @@ export function GenealogyTreeView({ allSpecies }: { allSpecies: PokemonSpecies[]
       });
     }
 
-    const positions = computeLayout(rawNodes, rawEdges);
+    const positions = computeLayout(rawNodes, rawEdges, orientation);
     const nodes = rawNodes.map((n) => ({ ...n, ...positions.get(n.id)! }));
 
     return { nodes, edges: rawEdges };
-  }, [tree]);
+  }, [tree, orientation]);
 
   const nodesById = useMemo(() => new Map(nodes.map((n) => [n.id, n])), [nodes]);
 
@@ -93,8 +97,14 @@ export function GenealogyTreeView({ allSpecies }: { allSpecies: PokemonSpecies[]
 
   return (
     <div style={{ width: "100%", height: "91vh" }}>
+      <TreeControls
+        targetIvCount={targetIvCount}
+        onTargetIvCountChange={setTargetIvCount}
+        orientation={orientation}
+        onOrientationChange={setOrientation}
+      />
       <Canvas worldWidth={worldWidth} worldHeight={worldHeight}>
-        <CanvasEdges edges={edges} nodesById={nodesById} />
+        <CanvasEdges edges={edges} nodesById={nodesById} orientation={orientation} />
         {nodes.map((node) => {
           const slot = tree[node.genIndex][node.slotIndex];
           const entry = entries.find((e) => e.id === slot.inventoryEntryId);

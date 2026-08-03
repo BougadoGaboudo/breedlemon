@@ -6,6 +6,7 @@ type SelectProps<T extends string | number> = {
   placeholder: string;
   clearLabel?: string;
   disabled?: boolean;
+  className?: string;
   onChange: (value: T | undefined) => void;
 };
 
@@ -15,6 +16,7 @@ export function Select<T extends string | number>({
   placeholder,
   clearLabel,
   disabled,
+  className,
   onChange,
 }: SelectProps<T>) {
   const isNumeric = options.length > 0 && typeof options[0].value === "number";
@@ -30,7 +32,7 @@ export function Select<T extends string | number>({
 
   return (
     <select
-      className="w-full cursor-pointer border border-dark-500 rounded-sm"
+      className={`w-full cursor-pointer border border-dark-500 rounded-sm ${className}`}
       value={value ?? ""}
       disabled={disabled}
       onChange={handleChange}

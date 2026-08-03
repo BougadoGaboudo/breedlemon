@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import { GenealogyTree, createEmptyTree, getParentSlotsForChild } from "@/lib/genealogyTree";
+import { GenealogyTree, createEmptyTree, getParentSlotsForChild, resizeTree } from "@/lib/genealogyTree";
 
 type GenealogyTreeState = {
   targetIvCount: number;
@@ -45,10 +45,13 @@ export const useGenealogyTreeStore = create<GenealogyTreeState>()(
       fertilityUsage: {},
 
       setTargetIvCount: (count) =>
-        set({
-          targetIvCount: count,
-          tree: createEmptyTree(count),
-          fertilityUsage: {},
+        set((state) => {
+          const newTree = resizeTree(state.tree, count);
+          return {
+            targetIvCount: count,
+            tree: newTree,
+            fertilityUsage: computeFertilityUsage(newTree),
+          };
         }),
 
       assignSlot: (genIndex, slotIndex, inventoryEntryId) =>
