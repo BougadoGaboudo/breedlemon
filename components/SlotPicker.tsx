@@ -6,6 +6,7 @@ import { InventoryCard } from "./InventoryCard";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import PrimaryButton from "./PrimaryButton";
 import SecondaryButton from "./SecondaryButton";
+import { useThemeStore } from "@/stores/themeStore";
 
 type SlotPickerProps = {
   eligibleEntries: InventoryEntry[];
@@ -24,6 +25,8 @@ export function SlotPicker({
   onAddParent,
   onClose,
 }: SlotPickerProps) {
+  const { theme } = useThemeStore();
+
   return (
     <div
       className="flex flex-col gap-2 bg-light-500 rounded-lg py-4 px-6 w-full max-w-md"
@@ -63,9 +66,9 @@ export function SlotPicker({
             return (
               <AccordionItem key={entry.id} value={entry.id}>
                 <AccordionTrigger
-                  className={`flex-1 px-4 py-2 cursor-pointer text-base hover:text-dark-500 ${isSelected ? "bg-primary-500 rounded-lg" : ""}`}
+                  className={`flex-1 px-4 py-2 cursor-pointer text-base {text-dark-500 hover:text-light-500} ${isSelected ? "bg-primary-500 rounded-lg" : ""}`}
                 >
-                  <span className="text-dark-500/70 mr-2">{formatDisplayNumber(entry.displayNumber)}</span>
+                  <span className={`text-dark-500/70 mr-2`}>{formatDisplayNumber(entry.displayNumber)}</span>
                   <span>{species?.name.fr ?? "?"}</span>
                 </AccordionTrigger>
 

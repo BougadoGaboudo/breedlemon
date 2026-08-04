@@ -32,7 +32,7 @@ export function Select<T extends string | number>({
 
   return (
     <select
-      className={`w-full cursor-pointer border border-dark-500 rounded-sm ${className}`}
+      className={`w-full cursor-pointer border border-dark-500 rounded-sm bg-light-500 text-dark-500 ${className}`}
       value={value ?? ""}
       disabled={disabled}
       onChange={handleChange}

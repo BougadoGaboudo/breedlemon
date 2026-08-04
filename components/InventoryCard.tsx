@@ -11,6 +11,8 @@ import SecondaryButton from "./SecondaryButton";
 import { breedingItems } from "@/data/breedingItems";
 import { useGenealogyTreeStore } from "@/stores/genealogyTreeStore";
 import PrimaryButton from "./PrimaryButton";
+import { useThemeStore } from "@/stores/themeStore";
+import { SpeciesCombobox } from "./SpeciesCombobox";
 
 type InventoryCardProps = {
   entry: InventoryEntry;
@@ -29,6 +31,8 @@ export function InventoryCard({
   getForcedGender,
   deleteLabel = "Supprimer",
 }: InventoryCardProps) {
+  const { theme } = useThemeStore();
+
   const updateEntry = useInventoryStore((s) => s.updateEntry);
   const removeEntry = useInventoryStore((s) => s.removeEntry);
   const removeEntryFromTree = useGenealogyTreeStore((s) => s.removeEntryFromTree);
@@ -51,6 +55,10 @@ export function InventoryCard({
 
   const forcedGender = species && getForcedGender ? getForcedGender(species.id) : null;
 
+  const isUsedInTree = useGenealogyTreeStore((s) =>
+    s.tree.some((generation) => generation.some((slot) => slot.inventoryEntryId === entry.id)),
+  );
+
   return (
     <section className="bg-light-500 flex flex-col gap-4 p-4 border-2 border-dark-500 rounded-lg">
       <div className="grid grid-cols-3 gap-4 items-center">
@@ -60,10 +68,22 @@ export function InventoryCard({
           <span className="h-full w-full content-center text-center bg-primary-500/25 rounded-lg">?</span>
         )}
         <div className="col-span-2 flex flex-col gap-2">
-          <p className="text-lg text-dark-500/60">{formatDisplayNumber(entry.displayNumber)}</p>
+          <div className="flex items-center gap-2">
+            <p className="text-lg text-dark-500/60">{formatDisplayNumber(entry.displayNumber)}</p>
+            {isUsedInTree && <span className="text-sm text-dark-500/70">Déjà utilisé</span>}
+          </div>
           <div className="flex items-center gap-2">
             <label className="w-fit whitespace-nowrap">Pokémon : </label>
-            <Select
+            <SpeciesCombobox
+              value={entry.draft.speciesId}
+              options={speciesOptions}
+              placeholder="Pokémon"
+              onChange={(speciesId) => {
+                const forced = speciesId !== undefined && getForcedGender ? getForcedGender(speciesId) : null;
+                update({ speciesId, gender: forced ?? undefined });
+              }}
+            />
+            {/* <Select
               value={entry.draft.speciesId}
               options={speciesOptions.map((s) => ({ value: s.id, label: s.name.fr }))}
               placeholder="Pokémon"
@@ -71,7 +91,7 @@ export function InventoryCard({
                 const forced = speciesId !== undefined && getForcedGender ? getForcedGender(speciesId) : null;
                 update({ speciesId, gender: forced ?? undefined });
               }}
-            />
+            /> */}
           </div>
           <div className="flex items-center gap-2">
             <label className="w-fit whitespace-nowrap">Sexe : </label>
@@ -103,7 +123,10 @@ export function InventoryCard({
         <div className="flex gap-2 flex-wrap">
           {species && species.eggGroups.length > 0 ? (
             species.eggGroups.map((group) => (
-              <span key={group} className="px-4 py-2 bg-primary-500 rounded-lg text-sm">
+              <span
+                key={group}
+                className={`px-4 py-2 ${theme === "dark" ? "text-light-500" : "text-dark-500"} bg-primary-500 rounded-lg text-sm`}
+              >
                 {eggGroupLabels[group] ?? group}
               </span>
             ))
