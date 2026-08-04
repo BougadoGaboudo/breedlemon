@@ -4,8 +4,11 @@ import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 import { SaveFileControls } from "./SaveFileControls";
+import { ThemeToggle } from "./ThemeToggle";
+import { useThemeStore } from "@/stores/themeStore";
 
 export default function Navbar() {
+  const { theme } = useThemeStore();
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -28,10 +31,14 @@ export default function Navbar() {
         <li>
           <Link
             href="/inventory"
-            className="px-4 py-2 mr-4 transition-all duration-250 ease-out hover:text-primary-500"
+            className="px-4 py-2 mr-2 transition-all duration-250 ease-out hover:text-primary-500"
           >
             Inventaire
           </Link>
+        </li>
+
+        <li className="mr-4">
+          <ThemeToggle />
         </li>
 
         <li>
@@ -65,7 +72,9 @@ export default function Navbar() {
         />
       </button>
       {isOpen && (
-        <ul className="fixed inset-0 z-50 flex flex-col items-center justify-center gap-6 bg-dark-500/90 text-light-500 md:hidden">
+        <ul
+          className={`fixed inset-0 z-50 flex flex-col items-center justify-center gap-6 md:hidden ${theme === "dark" ? "bg-light-500/90 text-dark-500" : "bg-dark-500/90 text-light-500"}`}
+        >
           <li>
             <Link href="/">Accueil</Link>
           </li>
@@ -76,6 +85,9 @@ export default function Navbar() {
             <Link href="/inventory">Inventaire</Link>
           </li>
 
+          <li>
+            <ThemeToggle />
+          </li>
           <li>
             <SaveFileControls />
           </li>

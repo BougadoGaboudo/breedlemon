@@ -3,19 +3,15 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-@custom-variant dark (&:is(.dark *));
-
 @theme inline {
   --font-playpen-sans: "Playpen Sans", sans-serif;
 
-  --color-primary-200: oklch(0.8059 0.1603 76.24 / 0.2);
-  --color-primary-500: oklch(0.8059 0.1603 76.24);
+  --color-primary-500: var(--breed-primary);
+  --color-red-500: var(--breed-red);
+  --color-green-500: var(--breed-green);
 
-  /* --color-secondary-500: oklch(0.7177 0.1511 120.14); */
-
-  --color-light-500: oklch(0.9735 0.0098 87.47);
-
-  --color-dark-500: oklch(0.2882 0.0197 59.49);
+  --color-light-500: var(--theme-light);
+  --color-dark-500: var(--theme-dark);
 
   --drop-shadow: 0.5em 0.5em 0 var(--color-dark-500);
 
@@ -100,6 +96,24 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
+:root {
+  --theme-light: oklch(0.9735 0.0098 87.47);
+  --theme-dark: oklch(0.2882 0.0197 59.49);
+
+  --breed-primary: oklch(0.8059 0.1603 76.24);
+  --breed-red: oklch(0.6558 0.208 34.66);
+  --breed-green: oklch(0.8027 0.1923 135.57);
+}
+
+.dark {
+  --theme-light: oklch(0.2147 0.0099 59.49);
+  --theme-dark: oklch(0.9735 0.0098 87.47);
+
+  --breed-primary: oklch(0.8059 0.1603 76.24);
+  --breed-red: oklch(0.54304 0.18864 33.857);
+  --breed-green: oklch(0.51338 0.14898 136.516);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -108,6 +122,9 @@ body {
   font-family: var(--font-playpen-sans);
   color: var(--color-dark-500);
   background-color: var(--color-light-500);
+  transition:
+    background-color 300ms ease,
+    color 300ms ease;
 }
 
 input[type="range"] {
