@@ -29,6 +29,30 @@ export type TreeBreed = {
   };
 };
 
+export type PairingStatus = "not_started" | "in_progress" | "done";
+
+export function getPairingKey(genIndex: number, slotIndex: number): string {
+  return `${genIndex}-${slotIndex}`;
+}
+
+export function shiftPairingStatus(
+  status: Record<string, PairingStatus>,
+  oldTreeLength: number,
+  newTreeLength: number,
+): Record<string, PairingStatus> {
+  const diff = oldTreeLength - newTreeLength;
+  const result: Record<string, PairingStatus> = {};
+
+  for (const [key, value] of Object.entries(status)) {
+    const [genIndexStr, slotIndexStr] = key.split("-");
+    const newGenIndex = Number(genIndexStr) - diff;
+    if (newGenIndex < 1 || newGenIndex >= newTreeLength) continue;
+    result[getPairingKey(newGenIndex, Number(slotIndexStr))] = value;
+  }
+
+  return result;
+}
+
 export function createEmptyTree(targetIvCount: number): GenealogyTree {
   if (targetIvCount < 2 || targetIvCount > 6) {
     throw new Error("targetIvCount doit être entre 2 et 6");

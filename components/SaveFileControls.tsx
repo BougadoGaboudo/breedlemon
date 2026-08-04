@@ -15,13 +15,14 @@ export function SaveFileControls() {
   const targetIvCount = useGenealogyTreeStore((s) => s.targetIvCount);
   const tree = useGenealogyTreeStore((s) => s.tree);
   const loadTree = useGenealogyTreeStore((s) => s.loadTree);
+  const pairingStatus = useGenealogyTreeStore((s) => s.pairingStatus);
 
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleExport = () =>
     exportBreedlemonData({
       inventory: { entries, nextDisplayNumber },
-      genealogyTree: { targetIvCount, tree },
+      genealogyTree: { targetIvCount, tree, pairingStatus },
     });
 
   const handleFileSelected = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -35,7 +36,7 @@ export function SaveFileControls() {
         return;
       }
       loadEntries(parsed.inventory.entries, parsed.inventory.nextDisplayNumber);
-      loadTree(parsed.genealogyTree.targetIvCount, parsed.genealogyTree.tree);
+      loadTree(parsed.genealogyTree.targetIvCount, parsed.genealogyTree.tree, parsed.genealogyTree.pairingStatus);
     });
 
     e.target.value = "";

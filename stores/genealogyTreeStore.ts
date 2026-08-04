@@ -1,16 +1,27 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import { GenealogyTree, createEmptyTree, getParentSlotsForChild, resizeTree } from "@/lib/genealogyTree";
+import {
+  GenealogyTree,
+  PairingStatus,
+  createEmptyTree,
+  getPairingKey,
+  getParentSlotsForChild,
+  resizeTree,
+  shiftPairingStatus,
+} from "@/lib/genealogyTree";
 
 type GenealogyTreeState = {
   targetIvCount: number;
   tree: GenealogyTree;
   fertilityUsage: Record<string, number>;
+  pairingStatus: Record<string, PairingStatus>;
 
   setTargetIvCount: (count: number) => void;
   assignSlot: (genIndex: number, slotIndex: number, inventoryEntryId: string | undefined) => void;
   removeEntryFromTree: (inventoryEntryId: string) => void;
-  loadTree: (targetIvCount: number, tree: GenealogyTree) => void;
+  loadTree: (targetIvCount: number, tree: GenealogyTree, pairingStatus?: Record<string, PairingStatus>) => void;
+  setPairingStatus: (genIndex: number, slotIndex: number, status: PairingStatus) => void;
+  clearAllSlots: () => void;
 };
 
 function computeFertilityUsage(tree: GenealogyTree): Record<string, number> {
@@ -43,6 +54,7 @@ export const useGenealogyTreeStore = create<GenealogyTreeState>()(
       targetIvCount: 6,
       tree: createEmptyTree(6),
       fertilityUsage: {},
+      pairingStatus: {},
 
       setTargetIvCount: (count) =>
         set((state) => {
@@ -51,6 +63,7 @@ export const useGenealogyTreeStore = create<GenealogyTreeState>()(
             targetIvCount: count,
             tree: newTree,
             fertilityUsage: computeFertilityUsage(newTree),
+            pairingStatus: shiftPairingStatus(state.pairingStatus, state.tree.length, newTree.length),
           };
         }),
 
@@ -80,11 +93,23 @@ export const useGenealogyTreeStore = create<GenealogyTreeState>()(
           };
         }),
 
-      loadTree: (targetIvCount, tree) =>
+      loadTree: (targetIvCount, tree, pairingStatus) =>
         set({
           targetIvCount,
           tree,
           fertilityUsage: computeFertilityUsage(tree),
+          pairingStatus: pairingStatus ?? {},
+        }),
+
+      setPairingStatus: (genIndex, slotIndex, status) =>
+        set((state) => ({
+          pairingStatus: { ...state.pairingStatus, [getPairingKey(genIndex, slotIndex)]: status },
+        })),
+
+      clearAllSlots: () =>
+        set((state) => {
+          const newTree = state.tree.map((generation) => generation.map(() => ({ inventoryEntryId: undefined })));
+          return { tree: newTree, fertilityUsage: {}, pairingStatus: {} };
         }),
     }),
     { name: "breedlemon-genealogy-tree" },

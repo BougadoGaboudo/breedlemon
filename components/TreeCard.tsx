@@ -9,6 +9,8 @@ import { useGenealogyTreeStore } from "@/stores/genealogyTreeStore";
 import { TreeCardPreview } from "./TreeCardPreview";
 import { useRef, useState } from "react";
 import { cn } from "@/lib/utils";
+import { PairingStatus } from "@/lib/genealogyTree";
+import { PairingStatusBadge } from "./PairingStatusBadge";
 
 type TreeCardProps = {
   entry: InventoryEntry | undefined;
@@ -16,9 +18,19 @@ type TreeCardProps = {
   onClick: () => void;
   canBreed?: boolean;
   onBreed?: () => void;
+  pairingStatus?: PairingStatus;
+  onPairingStatusChange?: (status: PairingStatus) => void;
 };
 
-export function TreeCard({ entry, allSpecies, onClick, canBreed, onBreed }: TreeCardProps) {
+export function TreeCard({
+  entry,
+  allSpecies,
+  onClick,
+  canBreed,
+  onBreed,
+  pairingStatus,
+  onPairingStatusChange,
+}: TreeCardProps) {
   const fertilityUsage = useGenealogyTreeStore((s) => s.fertilityUsage);
   const containerRef = useRef<HTMLDivElement>(null);
   const [previewHorizontal, setPreviewHorizontal] = useState<"left" | "right">("right");
@@ -39,27 +51,38 @@ export function TreeCard({ entry, allSpecies, onClick, canBreed, onBreed }: Tree
     setPreviewVertical(spaceBelowTop >= PREVIEW_HEIGHT_ESTIMATE ? "top" : "bottom");
   };
 
+  const badge =
+    pairingStatus && onPairingStatusChange ? (
+      <PairingStatusBadge status={pairingStatus} onChange={onPairingStatusChange} />
+    ) : null;
+
   if (!entry) {
     if (canBreed) {
       return (
-        <button
-          type="button"
-          onClick={onBreed}
-          className="flex items-center justify-center border-2 border-dark-500 rounded-lg w-full h-full cursor-pointer"
-        >
-          Breed
-        </button>
+        <div className="relative w-full h-full">
+          <button
+            type="button"
+            onClick={onBreed}
+            className="flex items-center justify-center border-2 border-dark-500 rounded-lg w-full h-full cursor-pointer"
+          >
+            Breed
+          </button>
+          {badge}
+        </div>
       );
     }
 
     return (
-      <button
-        type="button"
-        onClick={onClick}
-        className="flex items-center justify-center border-2 border-dashed border-dark-500/50 rounded-lg w-full h-full cursor-pointer"
-      >
-        <span className="text-3xl text-dark-500/50">+</span>
-      </button>
+      <div className="relative w-full h-full">
+        <button
+          type="button"
+          onClick={onClick}
+          className="flex items-center justify-center border-2 border-dashed border-dark-500/50 rounded-lg w-full h-full cursor-pointer"
+        >
+          <span className="text-3xl text-dark-500/50">+</span>
+        </button>
+        {badge}
+      </div>
     );
   }
 
@@ -116,6 +139,7 @@ export function TreeCard({ entry, allSpecies, onClick, canBreed, onBreed }: Tree
         <p className="text-xs">{stats.map((s) => entry.draft.ivs[s]).join("/")}</p>
         <p className="text-xs text-dark-500/70">{stats.map((s) => statLabels[s]).join("/")}</p> */}
       </button>
+      {badge}
       <div
         className={cn(
           "absolute w-80 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity pointer-events-none z-50",

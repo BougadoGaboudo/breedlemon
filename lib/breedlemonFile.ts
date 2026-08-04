@@ -1,5 +1,5 @@
 import { InventoryEntry } from "@/stores/inventoryStore";
-import { GenealogyTree } from "@/lib/genealogyTree";
+import { GenealogyTree, PairingStatus } from "@/lib/genealogyTree";
 
 export type BreedlemonFile = {
   version: 1;
@@ -10,6 +10,7 @@ export type BreedlemonFile = {
   genealogyTree: {
     targetIvCount: number;
     tree: GenealogyTree;
+    pairingStatus?: Record<string, PairingStatus>;
   };
 };
 

@@ -17,6 +17,7 @@ type InventoryState = {
   updateEntry: (id: string, draft: ParentPokemonDraft) => void;
   removeEntry: (id: string) => void;
   loadEntries: (entries: InventoryEntry[], nextDisplayNumber: number) => void;
+  clearEntries: () => void;
 };
 
 export const useInventoryStore = create<InventoryState>()(
@@ -59,6 +60,8 @@ export const useInventoryStore = create<InventoryState>()(
       removeEntry: (id) => set((state) => ({ entries: state.entries.filter((e) => e.id !== id) })),
 
       loadEntries: (entries, nextDisplayNumber) => set({ entries, nextDisplayNumber }),
+
+      clearEntries: () => set({ entries: [] }),
     }),
     { name: "breedlemon-inventory" },
   ),

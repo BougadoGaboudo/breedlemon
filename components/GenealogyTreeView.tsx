@@ -4,7 +4,12 @@ import { useMemo, useState } from "react";
 import { PokemonSpecies } from "@/types";
 import { useGenealogyTreeStore } from "@/stores/genealogyTreeStore";
 import { useInventoryStore } from "@/stores/inventoryStore";
-import { getEligibleEntriesForSlot, getEligibleSpeciesForSlot, getForcedGenderForSlot } from "@/lib/genealogyTree";
+import {
+  getEligibleEntriesForSlot,
+  getEligibleSpeciesForSlot,
+  getForcedGenderForSlot,
+  getPairingKey,
+} from "@/lib/genealogyTree";
 import { computeLayout } from "@/lib/layout";
 import { Canvas } from "./Canvas";
 import { CanvasEdges } from "./CanvasEdges";
@@ -27,6 +32,8 @@ export function GenealogyTreeView({ allSpecies }: { allSpecies: PokemonSpecies[]
   const assignSlot = useGenealogyTreeStore((s) => s.assignSlot);
   const entries = useInventoryStore((s) => s.entries);
   const addEntry = useInventoryStore((s) => s.addEntry);
+  const pairingStatus = useGenealogyTreeStore((s) => s.pairingStatus);
+  const setPairingStatus = useGenealogyTreeStore((s) => s.setPairingStatus);
   const { breedSlot, canBreedSlot } = useTreeBreed(allSpecies);
 
   const [orientation, setOrientation] = useState<"horizontal" | "vertical">("horizontal");
@@ -121,6 +128,14 @@ export function GenealogyTreeView({ allSpecies }: { allSpecies: PokemonSpecies[]
                 onClick={() => setSelectedSlot({ genIndex: node.genIndex, slotIndex: node.slotIndex })}
                 canBreed={!entry && canBreedSlot(node.genIndex, node.slotIndex)}
                 onBreed={() => breedSlot(node.genIndex, node.slotIndex)}
+                pairingStatus={
+                  node.genIndex > 0
+                    ? (pairingStatus[getPairingKey(node.genIndex, node.slotIndex)] ?? "not_started")
+                    : undefined
+                }
+                onPairingStatusChange={
+                  node.genIndex > 0 ? (status) => setPairingStatus(node.genIndex, node.slotIndex, status) : undefined
+                }
               />
             </div>
           );
