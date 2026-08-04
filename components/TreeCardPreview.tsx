@@ -6,10 +6,12 @@ import { stats, eggGroupLabels, genderLabels, statLabels, maxIV } from "@/data/s
 import { InventoryEntry, formatDisplayNumber } from "@/stores/inventoryStore";
 import { breedingItems } from "@/data/breedingItems";
 import { useGenealogyTreeStore } from "@/stores/genealogyTreeStore";
+import { useThemeStore } from "@/stores/themeStore";
 
 type TreeCardPreviewProps = { entry: InventoryEntry; allSpecies: PokemonSpecies[] };
 
 export function TreeCardPreview({ entry, allSpecies }: TreeCardPreviewProps) {
+  const { theme } = useThemeStore();
   const species = allSpecies.find((s) => s.id === entry.draft.speciesId) ?? null;
   const item = breedingItems.find((i) => i.stat === entry.draft.heldItemStat);
 
@@ -41,7 +43,10 @@ export function TreeCardPreview({ entry, allSpecies }: TreeCardPreviewProps) {
         <div className="flex gap-2 flex-wrap">
           {species && species.eggGroups.length > 0 ? (
             species.eggGroups.map((group) => (
-              <span key={group} className="px-4 py-2 bg-primary-500 rounded-lg text-sm">
+              <span
+                key={group}
+                className={`px-4 py-2 ${theme === "dark" ? "text-light-500" : "text-dark-500"} bg-primary-500 rounded-lg text-sm`}
+              >
                 {eggGroupLabels[group] ?? group}
               </span>
             ))
