@@ -26,4 +26,13 @@ export const faqs: Faq[] = [
     answer:
       'Tu peux supprimer un Pokémon en allant dans l\'onglet "Inventaire". Ici tu pourras modifier / supprimer le pokémon souhaité.',
   },
+  {
+    value: "save",
+    question: 'A quoi servent les boutons "Exporter" et "Importer" ?',
+    answer: [
+      'En cliquant sur "Exporter", tu peux sauvegarder dans un fichier JSON tous tes Pokémon de l\'onglet "Inventaire" et ceux placés dans les slots de l\'onglet "Arbre".',
+      'En cliquant sur "Importer", tu peux importer le fichier JSON généré par l\'export et récupérer tous tes Pokémon.',
+      "Cette fonctionnalité est utile si tu changes de navigateur, si tu souhaites partager tes breeds avec d'autres personnes ou si tu souhaites garder une trace de tes précédents breeds.",
+    ],
+  },
 ];

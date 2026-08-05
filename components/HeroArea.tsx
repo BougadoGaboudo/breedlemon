@@ -8,7 +8,7 @@ export default function HeroArea() {
   const { theme } = useThemeStore();
   return (
     <>
-      <section className="py-24 max-w-7xl mx-auto flex flex-col gap-4 items-center justify-center">
+      <section className="py-24 max-w-7xl mx-auto flex flex-col gap-4 items-center justify-center text-center px-4 md:px-0">
         <h1>
           <Image src="/images/logo.png" alt="Breedlemon" width={895} height={327} className="w-100 h-auto" />
         </h1>
@@ -27,7 +27,7 @@ export default function HeroArea() {
         alt="Bougado"
         width={400}
         height={400}
-        className="w-100 h-auto mx-auto"
+        className="w-100 h-auto mx-auto px-4 md:px-0"
       />
     </>
   );

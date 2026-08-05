@@ -47,7 +47,7 @@ export default function Navbar() {
       </ul>
       <button
         type="button"
-        className="mx-4 group cursor-pointer relative z-60 flex h-10 w-10 items-center justify-center md:hidden"
+        className="group cursor-pointer relative z-60 flex h-10 w-10 items-center justify-center md:hidden"
         onClick={() => setIsOpen(!isOpen)}
       >
         <span
