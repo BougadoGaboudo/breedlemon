@@ -90,13 +90,13 @@ export function SlotPicker({
                         <span className="text-dark-500/70 mr-2">{formatDisplayNumber(entry.displayNumber)}</span>
                         <span>{species?.name.fr ?? "?"}</span>
                       </div>
-                      <p className="text-sm text-dark-500/70">
+                      <p className="text-sm text-dark-500/80">
                         {entry.draft.gender ? genderLabels[entry.draft.gender] : "?"}{" "}
                         <span className="text-dark-500/50">|</span> F : {entry.draft.fertility} ({remainingFertility})
                       </p>
-                      <p className="text-sm text-dark-500/70">IVs : {stats.map((s) => entry.draft.ivs[s]).join("/")}</p>
+                      <p className="text-sm text-dark-500">IVs : {stats.map((s) => entry.draft.ivs[s]).join("/")}</p>
                       {item ? (
-                        <p className="text-sm">
+                        <p className="text-sm text-dark-500/75">
                           {item.nameFr} ({statLabels[item.stat]})
                         </p>
                       ) : (
