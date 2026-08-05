@@ -6,7 +6,10 @@ import { InventoryCard } from "./InventoryCard";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import PrimaryButton from "./PrimaryButton";
 import SecondaryButton from "./SecondaryButton";
-import { useThemeStore } from "@/stores/themeStore";
+import { genderLabels, statLabels, stats } from "@/data/stats";
+import { useGenealogyTreeStore } from "@/stores/genealogyTreeStore";
+import Image from "next/image";
+import { breedingItems } from "@/data/breedingItems";
 
 type SlotPickerProps = {
   eligibleEntries: InventoryEntry[];
@@ -25,7 +28,7 @@ export function SlotPicker({
   onAddParent,
   onClose,
 }: SlotPickerProps) {
-  const { theme } = useThemeStore();
+  const fertilityUsage = useGenealogyTreeStore((s) => s.fertilityUsage);
 
   return (
     <div
@@ -62,14 +65,45 @@ export function SlotPicker({
           {eligibleEntries.map((entry) => {
             const species = allSpecies.find((s) => s.id === entry.draft.speciesId);
             const isSelected = entry.id === selectedEntryId;
+            const remainingFertility = Math.max(0, entry.draft.fertility - (fertilityUsage[entry.id] ?? 0));
+            const item = breedingItems.find((i) => i.stat === entry.draft.heldItemStat);
 
             return (
               <AccordionItem key={entry.id} value={entry.id}>
                 <AccordionTrigger
                   className={`flex-1 px-4 py-2 cursor-pointer text-base {text-dark-500 hover:text-light-500} ${isSelected ? "bg-primary-500 rounded-lg" : ""}`}
                 >
-                  <span className={`text-dark-500/70 mr-2`}>{formatDisplayNumber(entry.displayNumber)}</span>
-                  <span>{species?.name.fr ?? "?"}</span>
+                  <div className="flex items-center gap-4">
+                    {species?.sprite ? (
+                      <Image
+                        src={species.sprite}
+                        alt={species.name.fr}
+                        width={80}
+                        height={80}
+                        className="bg-primary-500/25 rounded-lg"
+                      />
+                    ) : (
+                      <span className="w-10 h-10 flex items-center justify-center bg-primary-500/25 rounded">?</span>
+                    )}
+                    <div className="flex flex-col">
+                      <div className="flex">
+                        <span className="text-dark-500/70 mr-2">{formatDisplayNumber(entry.displayNumber)}</span>
+                        <span>{species?.name.fr ?? "?"}</span>
+                      </div>
+                      <p className="text-sm text-dark-500/70">
+                        {entry.draft.gender ? genderLabels[entry.draft.gender] : "?"}{" "}
+                        <span className="text-dark-500/50">|</span> F : {entry.draft.fertility} ({remainingFertility})
+                      </p>
+                      <p className="text-sm text-dark-500/70">IVs : {stats.map((s) => entry.draft.ivs[s]).join("/")}</p>
+                      {item ? (
+                        <p className="text-sm">
+                          {item.nameFr} ({statLabels[item.stat]})
+                        </p>
+                      ) : (
+                        <span className="text-sm text-dark-500/75">Sans item</span>
+                      )}
+                    </div>
+                  </div>
                 </AccordionTrigger>
 
                 <AccordionContent>
