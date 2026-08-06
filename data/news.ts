@@ -6,6 +6,18 @@ type News = {
 
 export const news: News[] = [
   {
+    value: "region",
+    title: "Formes régionales",
+    description: [
+      "Les formes régionales sont désormais présentes sur le site !",
+      "Elles sont présentées de cette manière :",
+      '- Goupix d\'Alola -> "Goupix (A)"',
+      '- Darumarond de Galar -> "Darumarond (G)"',
+      '- Farfuret de Hisui -> "Farfuret (H)"',
+      '- Axoloto de Paldea -> "Axoloto (P)"',
+    ],
+  },
+  {
     value: "select",
     title: "Update UI/UX : Sélection de Pokémon",
     description:

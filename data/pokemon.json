@@ -617,6 +617,42 @@
     "baseFormId": 19
   },
   {
+    "id": 10091,
+    "name": {
+      "en": "rattata-alola",
+      "fr": "Rattata (A)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10091.png",
+    "types": [
+      "dark",
+      "normal"
+    ],
+    "eggGroups": [
+      "ground"
+    ],
+    "genderRate": 4,
+    "abilities": [
+      {
+        "name": "gluttony",
+        "hidden": false
+      },
+      {
+        "name": "hustle",
+        "hidden": false
+      },
+      {
+        "name": "thick-fat",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 10091
+  },
+  {
     "id": 20,
     "name": {
       "en": "raticate",
@@ -650,6 +686,42 @@
     "isBreedable": true,
     "canBreedWithDitto": true,
     "baseFormId": 19
+  },
+  {
+    "id": 10092,
+    "name": {
+      "en": "raticate-alola",
+      "fr": "Rattatac (A)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10092.png",
+    "types": [
+      "dark",
+      "normal"
+    ],
+    "eggGroups": [
+      "ground"
+    ],
+    "genderRate": 4,
+    "abilities": [
+      {
+        "name": "gluttony",
+        "hidden": false
+      },
+      {
+        "name": "hustle",
+        "hidden": false
+      },
+      {
+        "name": "thick-fat",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 10091
   },
   {
     "id": 21,
@@ -820,6 +892,38 @@
     "baseFormId": 172
   },
   {
+    "id": 10099,
+    "name": {
+      "en": "pikachu-alola-cap",
+      "fr": "Pikachu (A)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10099.png",
+    "types": [
+      "electric"
+    ],
+    "eggGroups": [
+      "ground",
+      "fairy"
+    ],
+    "genderRate": 4,
+    "abilities": [
+      {
+        "name": "static",
+        "hidden": false
+      },
+      {
+        "name": "lightning-rod",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 172
+  },
+  {
     "id": 26,
     "name": {
       "en": "raichu",
@@ -842,6 +946,35 @@
       {
         "name": "lightning-rod",
         "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 172
+  },
+  {
+    "id": 10100,
+    "name": {
+      "en": "raichu-alola",
+      "fr": "Raichu (A)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10100.png",
+    "types": [
+      "electric",
+      "psychic"
+    ],
+    "eggGroups": [
+      "ground",
+      "fairy"
+    ],
+    "genderRate": 4,
+    "abilities": [
+      {
+        "name": "surge-surfer",
+        "hidden": false
       }
     ],
     "isBaby": false,
@@ -883,6 +1016,38 @@
     "baseFormId": 27
   },
   {
+    "id": 10101,
+    "name": {
+      "en": "sandshrew-alola",
+      "fr": "Sabelette (A)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10101.png",
+    "types": [
+      "ice",
+      "steel"
+    ],
+    "eggGroups": [
+      "ground"
+    ],
+    "genderRate": 4,
+    "abilities": [
+      {
+        "name": "snow-cloak",
+        "hidden": false
+      },
+      {
+        "name": "slush-rush",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 10101
+  },
+  {
     "id": 28,
     "name": {
       "en": "sandslash",
@@ -912,6 +1077,38 @@
     "isBreedable": true,
     "canBreedWithDitto": true,
     "baseFormId": 27
+  },
+  {
+    "id": 10102,
+    "name": {
+      "en": "sandslash-alola",
+      "fr": "Sablaireau (A)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10102.png",
+    "types": [
+      "ice",
+      "steel"
+    ],
+    "eggGroups": [
+      "ground"
+    ],
+    "genderRate": 4,
+    "abilities": [
+      {
+        "name": "snow-cloak",
+        "hidden": false
+      },
+      {
+        "name": "slush-rush",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 10101
   },
   {
     "id": 29,
@@ -1231,6 +1428,37 @@
     "baseFormId": 37
   },
   {
+    "id": 10103,
+    "name": {
+      "en": "vulpix-alola",
+      "fr": "Goupix (A)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10103.png",
+    "types": [
+      "ice"
+    ],
+    "eggGroups": [
+      "ground"
+    ],
+    "genderRate": 6,
+    "abilities": [
+      {
+        "name": "snow-cloak",
+        "hidden": false
+      },
+      {
+        "name": "snow-warning",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 10103
+  },
+  {
     "id": 38,
     "name": {
       "en": "ninetales",
@@ -1260,6 +1488,38 @@
     "isBreedable": true,
     "canBreedWithDitto": true,
     "baseFormId": 37
+  },
+  {
+    "id": 10104,
+    "name": {
+      "en": "ninetales-alola",
+      "fr": "Feunard (A)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10104.png",
+    "types": [
+      "ice",
+      "fairy"
+    ],
+    "eggGroups": [
+      "ground"
+    ],
+    "genderRate": 6,
+    "abilities": [
+      {
+        "name": "snow-cloak",
+        "hidden": false
+      },
+      {
+        "name": "snow-warning",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 10103
   },
   {
     "id": 39,
@@ -1675,6 +1935,42 @@
     "baseFormId": 50
   },
   {
+    "id": 10105,
+    "name": {
+      "en": "diglett-alola",
+      "fr": "Taupiqueur (A)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10105.png",
+    "types": [
+      "ground",
+      "steel"
+    ],
+    "eggGroups": [
+      "ground"
+    ],
+    "genderRate": 4,
+    "abilities": [
+      {
+        "name": "sand-veil",
+        "hidden": false
+      },
+      {
+        "name": "tangling-hair",
+        "hidden": false
+      },
+      {
+        "name": "sand-force",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 10105
+  },
+  {
     "id": 51,
     "name": {
       "en": "dugtrio",
@@ -1708,6 +2004,42 @@
     "isBreedable": true,
     "canBreedWithDitto": true,
     "baseFormId": 50
+  },
+  {
+    "id": 10106,
+    "name": {
+      "en": "dugtrio-alola",
+      "fr": "Triopikeur (A)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10106.png",
+    "types": [
+      "ground",
+      "steel"
+    ],
+    "eggGroups": [
+      "ground"
+    ],
+    "genderRate": 4,
+    "abilities": [
+      {
+        "name": "sand-veil",
+        "hidden": false
+      },
+      {
+        "name": "tangling-hair",
+        "hidden": false
+      },
+      {
+        "name": "sand-force",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 10105
   },
   {
     "id": 52,
@@ -1745,6 +2077,76 @@
     "baseFormId": 52
   },
   {
+    "id": 10107,
+    "name": {
+      "en": "meowth-alola",
+      "fr": "Miaouss (A)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10107.png",
+    "types": [
+      "dark"
+    ],
+    "eggGroups": [
+      "ground"
+    ],
+    "genderRate": 4,
+    "abilities": [
+      {
+        "name": "pickup",
+        "hidden": false
+      },
+      {
+        "name": "technician",
+        "hidden": false
+      },
+      {
+        "name": "rattled",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 10107
+  },
+  {
+    "id": 10161,
+    "name": {
+      "en": "meowth-galar",
+      "fr": "Miaouss (G)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10161.png",
+    "types": [
+      "steel"
+    ],
+    "eggGroups": [
+      "ground"
+    ],
+    "genderRate": 4,
+    "abilities": [
+      {
+        "name": "pickup",
+        "hidden": false
+      },
+      {
+        "name": "tough-claws",
+        "hidden": false
+      },
+      {
+        "name": "unnerve",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 10161
+  },
+  {
     "id": 53,
     "name": {
       "en": "persian",
@@ -1778,6 +2180,41 @@
     "isBreedable": true,
     "canBreedWithDitto": true,
     "baseFormId": 52
+  },
+  {
+    "id": 10108,
+    "name": {
+      "en": "persian-alola",
+      "fr": "Persian (A)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10108.png",
+    "types": [
+      "dark"
+    ],
+    "eggGroups": [
+      "ground"
+    ],
+    "genderRate": 4,
+    "abilities": [
+      {
+        "name": "fur-coat",
+        "hidden": false
+      },
+      {
+        "name": "technician",
+        "hidden": false
+      },
+      {
+        "name": "rattled",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 10107
   },
   {
     "id": 54,
@@ -1957,6 +2394,42 @@
     "baseFormId": 58
   },
   {
+    "id": 10229,
+    "name": {
+      "en": "growlithe-hisui",
+      "fr": "Caninos (H)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10229.png",
+    "types": [
+      "fire",
+      "rock"
+    ],
+    "eggGroups": [
+      "ground"
+    ],
+    "genderRate": 2,
+    "abilities": [
+      {
+        "name": "intimidate",
+        "hidden": false
+      },
+      {
+        "name": "flash-fire",
+        "hidden": false
+      },
+      {
+        "name": "rock-head",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 10229
+  },
+  {
     "id": 59,
     "name": {
       "en": "arcanine",
@@ -1990,6 +2463,42 @@
     "isBreedable": true,
     "canBreedWithDitto": true,
     "baseFormId": 58
+  },
+  {
+    "id": 10230,
+    "name": {
+      "en": "arcanine-hisui",
+      "fr": "Arcanin (H)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10230.png",
+    "types": [
+      "fire",
+      "rock"
+    ],
+    "eggGroups": [
+      "ground"
+    ],
+    "genderRate": 2,
+    "abilities": [
+      {
+        "name": "intimidate",
+        "hidden": false
+      },
+      {
+        "name": "flash-fire",
+        "hidden": false
+      },
+      {
+        "name": "rock-head",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 10229
   },
   {
     "id": 60,
@@ -2512,6 +3021,42 @@
     "baseFormId": 74
   },
   {
+    "id": 10109,
+    "name": {
+      "en": "geodude-alola",
+      "fr": "Racaillou (A)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10109.png",
+    "types": [
+      "rock",
+      "electric"
+    ],
+    "eggGroups": [
+      "mineral"
+    ],
+    "genderRate": 4,
+    "abilities": [
+      {
+        "name": "magnet-pull",
+        "hidden": false
+      },
+      {
+        "name": "sturdy",
+        "hidden": false
+      },
+      {
+        "name": "galvanize",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 10109
+  },
+  {
     "id": 75,
     "name": {
       "en": "graveler",
@@ -2546,6 +3091,42 @@
     "isBreedable": true,
     "canBreedWithDitto": true,
     "baseFormId": 74
+  },
+  {
+    "id": 10110,
+    "name": {
+      "en": "graveler-alola",
+      "fr": "Gravalanch (A)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10110.png",
+    "types": [
+      "rock",
+      "electric"
+    ],
+    "eggGroups": [
+      "mineral"
+    ],
+    "genderRate": 4,
+    "abilities": [
+      {
+        "name": "magnet-pull",
+        "hidden": false
+      },
+      {
+        "name": "sturdy",
+        "hidden": false
+      },
+      {
+        "name": "galvanize",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 10109
   },
   {
     "id": 76,
@@ -2584,6 +3165,42 @@
     "baseFormId": 74
   },
   {
+    "id": 10111,
+    "name": {
+      "en": "golem-alola",
+      "fr": "Grolem (A)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10111.png",
+    "types": [
+      "rock",
+      "electric"
+    ],
+    "eggGroups": [
+      "mineral"
+    ],
+    "genderRate": 4,
+    "abilities": [
+      {
+        "name": "magnet-pull",
+        "hidden": false
+      },
+      {
+        "name": "sturdy",
+        "hidden": false
+      },
+      {
+        "name": "galvanize",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 10109
+  },
+  {
     "id": 77,
     "name": {
       "en": "ponyta",
@@ -2619,6 +3236,41 @@
     "baseFormId": 77
   },
   {
+    "id": 10162,
+    "name": {
+      "en": "ponyta-galar",
+      "fr": "Ponyta (G)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10162.png",
+    "types": [
+      "psychic"
+    ],
+    "eggGroups": [
+      "ground"
+    ],
+    "genderRate": 4,
+    "abilities": [
+      {
+        "name": "run-away",
+        "hidden": false
+      },
+      {
+        "name": "pastel-veil",
+        "hidden": false
+      },
+      {
+        "name": "anticipation",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 10162
+  },
+  {
     "id": 78,
     "name": {
       "en": "rapidash",
@@ -2652,6 +3304,42 @@
     "isBreedable": true,
     "canBreedWithDitto": true,
     "baseFormId": 77
+  },
+  {
+    "id": 10163,
+    "name": {
+      "en": "rapidash-galar",
+      "fr": "Galopa (G)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10163.png",
+    "types": [
+      "psychic",
+      "fairy"
+    ],
+    "eggGroups": [
+      "ground"
+    ],
+    "genderRate": 4,
+    "abilities": [
+      {
+        "name": "run-away",
+        "hidden": false
+      },
+      {
+        "name": "pastel-veil",
+        "hidden": false
+      },
+      {
+        "name": "anticipation",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 10162
   },
   {
     "id": 79,
@@ -2691,6 +3379,42 @@
     "baseFormId": 79
   },
   {
+    "id": 10164,
+    "name": {
+      "en": "slowpoke-galar",
+      "fr": "Ramoloss (G)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10164.png",
+    "types": [
+      "psychic"
+    ],
+    "eggGroups": [
+      "monster",
+      "water1"
+    ],
+    "genderRate": 4,
+    "abilities": [
+      {
+        "name": "gluttony",
+        "hidden": false
+      },
+      {
+        "name": "own-tempo",
+        "hidden": false
+      },
+      {
+        "name": "regenerator",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 10164
+  },
+  {
     "id": 80,
     "name": {
       "en": "slowbro",
@@ -2726,6 +3450,43 @@
     "isBreedable": true,
     "canBreedWithDitto": true,
     "baseFormId": 79
+  },
+  {
+    "id": 10165,
+    "name": {
+      "en": "slowbro-galar",
+      "fr": "Flagadoss (G)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10165.png",
+    "types": [
+      "poison",
+      "psychic"
+    ],
+    "eggGroups": [
+      "monster",
+      "water1"
+    ],
+    "genderRate": 4,
+    "abilities": [
+      {
+        "name": "quick-draw",
+        "hidden": false
+      },
+      {
+        "name": "own-tempo",
+        "hidden": false
+      },
+      {
+        "name": "regenerator",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 10164
   },
   {
     "id": 81,
@@ -2835,6 +3596,38 @@
     "isBreedable": true,
     "canBreedWithDitto": true,
     "baseFormId": 83
+  },
+  {
+    "id": 10166,
+    "name": {
+      "en": "farfetchd-galar",
+      "fr": "Canarticho (G)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10166.png",
+    "types": [
+      "fighting"
+    ],
+    "eggGroups": [
+      "flying",
+      "ground"
+    ],
+    "genderRate": 4,
+    "abilities": [
+      {
+        "name": "steadfast",
+        "hidden": false
+      },
+      {
+        "name": "scrappy",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 10166
   },
   {
     "id": 84,
@@ -3017,6 +3810,42 @@
     "baseFormId": 88
   },
   {
+    "id": 10112,
+    "name": {
+      "en": "grimer-alola",
+      "fr": "Tadmorv (A)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10112.png",
+    "types": [
+      "poison",
+      "dark"
+    ],
+    "eggGroups": [
+      "indeterminate"
+    ],
+    "genderRate": 4,
+    "abilities": [
+      {
+        "name": "poison-touch",
+        "hidden": false
+      },
+      {
+        "name": "gluttony",
+        "hidden": false
+      },
+      {
+        "name": "power-of-alchemy",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 10112
+  },
+  {
     "id": 89,
     "name": {
       "en": "muk",
@@ -3050,6 +3879,42 @@
     "isBreedable": true,
     "canBreedWithDitto": true,
     "baseFormId": 88
+  },
+  {
+    "id": 10113,
+    "name": {
+      "en": "muk-alola",
+      "fr": "Grotadmorv (A)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10113.png",
+    "types": [
+      "poison",
+      "dark"
+    ],
+    "eggGroups": [
+      "indeterminate"
+    ],
+    "genderRate": 4,
+    "abilities": [
+      {
+        "name": "poison-touch",
+        "hidden": false
+      },
+      {
+        "name": "gluttony",
+        "hidden": false
+      },
+      {
+        "name": "power-of-alchemy",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 10112
   },
   {
     "id": 90,
@@ -3418,6 +4283,42 @@
     "baseFormId": 100
   },
   {
+    "id": 10231,
+    "name": {
+      "en": "voltorb-hisui",
+      "fr": "Voltorbe (H)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10231.png",
+    "types": [
+      "electric",
+      "grass"
+    ],
+    "eggGroups": [
+      "mineral"
+    ],
+    "genderRate": -1,
+    "abilities": [
+      {
+        "name": "soundproof",
+        "hidden": false
+      },
+      {
+        "name": "static",
+        "hidden": false
+      },
+      {
+        "name": "aftermath",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": false,
+    "canBreedWithDitto": false,
+    "baseFormId": 10231
+  },
+  {
     "id": 101,
     "name": {
       "en": "electrode",
@@ -3451,6 +4352,42 @@
     "isBreedable": false,
     "canBreedWithDitto": false,
     "baseFormId": 100
+  },
+  {
+    "id": 10232,
+    "name": {
+      "en": "electrode-hisui",
+      "fr": "Électrode (H)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10232.png",
+    "types": [
+      "electric",
+      "grass"
+    ],
+    "eggGroups": [
+      "mineral"
+    ],
+    "genderRate": -1,
+    "abilities": [
+      {
+        "name": "soundproof",
+        "hidden": false
+      },
+      {
+        "name": "static",
+        "hidden": false
+      },
+      {
+        "name": "aftermath",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": false,
+    "canBreedWithDitto": false,
+    "baseFormId": 10231
   },
   {
     "id": 102,
@@ -3502,6 +4439,38 @@
     "abilities": [
       {
         "name": "chlorophyll",
+        "hidden": false
+      },
+      {
+        "name": "harvest",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 102
+  },
+  {
+    "id": 10114,
+    "name": {
+      "en": "exeggutor-alola",
+      "fr": "Noadkoko (A)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10114.png",
+    "types": [
+      "grass",
+      "dragon"
+    ],
+    "eggGroups": [
+      "plant"
+    ],
+    "genderRate": 4,
+    "abilities": [
+      {
+        "name": "frisk",
         "hidden": false
       },
       {
@@ -3576,6 +4545,42 @@
       },
       {
         "name": "battle-armor",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 104
+  },
+  {
+    "id": 10115,
+    "name": {
+      "en": "marowak-alola",
+      "fr": "Ossatueur (A)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10115.png",
+    "types": [
+      "fire",
+      "ghost"
+    ],
+    "eggGroups": [
+      "monster"
+    ],
+    "genderRate": 4,
+    "abilities": [
+      {
+        "name": "cursed-body",
+        "hidden": false
+      },
+      {
+        "name": "lightning-rod",
+        "hidden": false
+      },
+      {
+        "name": "rock-head",
         "hidden": true
       }
     ],
@@ -3751,6 +4756,42 @@
       },
       {
         "name": "stench",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 109
+  },
+  {
+    "id": 10167,
+    "name": {
+      "en": "weezing-galar",
+      "fr": "Smogogo (G)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10167.png",
+    "types": [
+      "poison",
+      "fairy"
+    ],
+    "eggGroups": [
+      "indeterminate"
+    ],
+    "genderRate": 4,
+    "abilities": [
+      {
+        "name": "levitate",
+        "hidden": false
+      },
+      {
+        "name": "neutralizing-gas",
+        "hidden": false
+      },
+      {
+        "name": "misty-surge",
         "hidden": true
       }
     ],
@@ -4190,6 +5231,42 @@
     "baseFormId": 439
   },
   {
+    "id": 10168,
+    "name": {
+      "en": "mr-mime-galar",
+      "fr": "M. Mime (G)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10168.png",
+    "types": [
+      "ice",
+      "psychic"
+    ],
+    "eggGroups": [
+      "humanshape"
+    ],
+    "genderRate": 4,
+    "abilities": [
+      {
+        "name": "vital-spirit",
+        "hidden": false
+      },
+      {
+        "name": "screen-cleaner",
+        "hidden": false
+      },
+      {
+        "name": "ice-body",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 439
+  },
+  {
     "id": 123,
     "name": {
       "en": "scyther",
@@ -4392,6 +5469,41 @@
     "isBreedable": true,
     "canBreedWithDitto": true,
     "baseFormId": 128
+  },
+  {
+    "id": 10250,
+    "name": {
+      "en": "tauros-paldea-combat-breed",
+      "fr": "Tauros (P)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10250.png",
+    "types": [
+      "fighting"
+    ],
+    "eggGroups": [
+      "ground"
+    ],
+    "genderRate": 0,
+    "abilities": [
+      {
+        "name": "intimidate",
+        "hidden": false
+      },
+      {
+        "name": "anger-point",
+        "hidden": false
+      },
+      {
+        "name": "cud-chew",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 10250
   },
   {
     "id": 129,
@@ -4941,6 +6053,34 @@
     "baseFormId": 144
   },
   {
+    "id": 10169,
+    "name": {
+      "en": "articuno-galar",
+      "fr": "Artikodin (G)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10169.png",
+    "types": [
+      "psychic",
+      "flying"
+    ],
+    "eggGroups": [
+      "no-eggs"
+    ],
+    "genderRate": -1,
+    "abilities": [
+      {
+        "name": "competitive",
+        "hidden": false
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": true,
+    "isMythical": false,
+    "isBreedable": false,
+    "canBreedWithDitto": false,
+    "baseFormId": 10169
+  },
+  {
     "id": 145,
     "name": {
       "en": "zapdos",
@@ -4973,6 +6113,34 @@
     "baseFormId": 145
   },
   {
+    "id": 10170,
+    "name": {
+      "en": "zapdos-galar",
+      "fr": "Électhor (G)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10170.png",
+    "types": [
+      "fighting",
+      "flying"
+    ],
+    "eggGroups": [
+      "no-eggs"
+    ],
+    "genderRate": -1,
+    "abilities": [
+      {
+        "name": "defiant",
+        "hidden": false
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": true,
+    "isMythical": false,
+    "isBreedable": false,
+    "canBreedWithDitto": false,
+    "baseFormId": 10170
+  },
+  {
     "id": 146,
     "name": {
       "en": "moltres",
@@ -5003,6 +6171,34 @@
     "isBreedable": false,
     "canBreedWithDitto": false,
     "baseFormId": 146
+  },
+  {
+    "id": 10171,
+    "name": {
+      "en": "moltres-galar",
+      "fr": "Sulfura (G)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10171.png",
+    "types": [
+      "dark",
+      "flying"
+    ],
+    "eggGroups": [
+      "no-eggs"
+    ],
+    "genderRate": -1,
+    "abilities": [
+      {
+        "name": "berserk",
+        "hidden": false
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": true,
+    "isMythical": false,
+    "isBreedable": false,
+    "canBreedWithDitto": false,
+    "baseFormId": 10171
   },
   {
     "id": 147,
@@ -5338,6 +6534,38 @@
       },
       {
         "name": "flash-fire",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 155
+  },
+  {
+    "id": 10233,
+    "name": {
+      "en": "typhlosion-hisui",
+      "fr": "Typhlosion (H)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10233.png",
+    "types": [
+      "fire",
+      "ghost"
+    ],
+    "eggGroups": [
+      "ground"
+    ],
+    "genderRate": 1,
+    "abilities": [
+      {
+        "name": "blaze",
+        "hidden": false
+      },
+      {
+        "name": "frisk",
         "hidden": true
       }
     ],
@@ -6641,6 +7869,43 @@
     "baseFormId": 194
   },
   {
+    "id": 10253,
+    "name": {
+      "en": "wooper-paldea",
+      "fr": "Axoloto (P)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10253.png",
+    "types": [
+      "poison",
+      "ground"
+    ],
+    "eggGroups": [
+      "water1",
+      "ground"
+    ],
+    "genderRate": 4,
+    "abilities": [
+      {
+        "name": "poison-point",
+        "hidden": false
+      },
+      {
+        "name": "water-absorb",
+        "hidden": false
+      },
+      {
+        "name": "unaware",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 10253
+  },
+  {
     "id": 195,
     "name": {
       "en": "quagsire",
@@ -6811,6 +8076,43 @@
     "isBreedable": true,
     "canBreedWithDitto": true,
     "baseFormId": 79
+  },
+  {
+    "id": 10172,
+    "name": {
+      "en": "slowking-galar",
+      "fr": "Roigada (G)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10172.png",
+    "types": [
+      "poison",
+      "psychic"
+    ],
+    "eggGroups": [
+      "monster",
+      "water1"
+    ],
+    "genderRate": 4,
+    "abilities": [
+      {
+        "name": "curious-medicine",
+        "hidden": false
+      },
+      {
+        "name": "own-tempo",
+        "hidden": false
+      },
+      {
+        "name": "regenerator",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 10164
   },
   {
     "id": 200,
@@ -7212,6 +8514,42 @@
     "baseFormId": 211
   },
   {
+    "id": 10234,
+    "name": {
+      "en": "qwilfish-hisui",
+      "fr": "Qwilfish (H)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10234.png",
+    "types": [
+      "dark",
+      "poison"
+    ],
+    "eggGroups": [
+      "water2"
+    ],
+    "genderRate": 4,
+    "abilities": [
+      {
+        "name": "poison-point",
+        "hidden": false
+      },
+      {
+        "name": "swift-swim",
+        "hidden": false
+      },
+      {
+        "name": "intimidate",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 10234
+  },
+  {
     "id": 212,
     "name": {
       "en": "scizor",
@@ -7354,6 +8692,42 @@
     "isBreedable": true,
     "canBreedWithDitto": true,
     "baseFormId": 215
+  },
+  {
+    "id": 10235,
+    "name": {
+      "en": "sneasel-hisui",
+      "fr": "Farfuret (H)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10235.png",
+    "types": [
+      "fighting",
+      "poison"
+    ],
+    "eggGroups": [
+      "ground"
+    ],
+    "genderRate": 4,
+    "abilities": [
+      {
+        "name": "inner-focus",
+        "hidden": false
+      },
+      {
+        "name": "keen-eye",
+        "hidden": false
+      },
+      {
+        "name": "pickpocket",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 10235
   },
   {
     "id": 216,
@@ -7604,6 +8978,38 @@
     "isBreedable": true,
     "canBreedWithDitto": true,
     "baseFormId": 222
+  },
+  {
+    "id": 10173,
+    "name": {
+      "en": "corsola-galar",
+      "fr": "Corayon (G)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10173.png",
+    "types": [
+      "ghost"
+    ],
+    "eggGroups": [
+      "water1",
+      "water3"
+    ],
+    "genderRate": 6,
+    "abilities": [
+      {
+        "name": "weak-armor",
+        "hidden": false
+      },
+      {
+        "name": "cursed-body",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 10173
   },
   {
     "id": 223,
@@ -8972,6 +10378,42 @@
     "baseFormId": 263
   },
   {
+    "id": 10174,
+    "name": {
+      "en": "zigzagoon-galar",
+      "fr": "Zigzaton (G)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10174.png",
+    "types": [
+      "dark",
+      "normal"
+    ],
+    "eggGroups": [
+      "ground"
+    ],
+    "genderRate": 4,
+    "abilities": [
+      {
+        "name": "pickup",
+        "hidden": false
+      },
+      {
+        "name": "gluttony",
+        "hidden": false
+      },
+      {
+        "name": "quick-feet",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 10174
+  },
+  {
     "id": 264,
     "name": {
       "en": "linoone",
@@ -9005,6 +10447,42 @@
     "isBreedable": true,
     "canBreedWithDitto": true,
     "baseFormId": 263
+  },
+  {
+    "id": 10175,
+    "name": {
+      "en": "linoone-galar",
+      "fr": "Linéon (G)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10175.png",
+    "types": [
+      "dark",
+      "normal"
+    ],
+    "eggGroups": [
+      "ground"
+    ],
+    "genderRate": 4,
+    "abilities": [
+      {
+        "name": "pickup",
+        "hidden": false
+      },
+      {
+        "name": "gluttony",
+        "hidden": false
+      },
+      {
+        "name": "quick-feet",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 10174
   },
   {
     "id": 265,
@@ -16879,6 +18357,38 @@
     "baseFormId": 501
   },
   {
+    "id": 10236,
+    "name": {
+      "en": "samurott-hisui",
+      "fr": "Clamiral (H)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10236.png",
+    "types": [
+      "water",
+      "dark"
+    ],
+    "eggGroups": [
+      "ground"
+    ],
+    "genderRate": 1,
+    "abilities": [
+      {
+        "name": "torrent",
+        "hidden": false
+      },
+      {
+        "name": "sharpness",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 501
+  },
+  {
     "id": 504,
     "name": {
       "en": "patrat",
@@ -18485,6 +19995,42 @@
     "baseFormId": 548
   },
   {
+    "id": 10237,
+    "name": {
+      "en": "lilligant-hisui",
+      "fr": "Fragilady (H)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10237.png",
+    "types": [
+      "grass",
+      "fighting"
+    ],
+    "eggGroups": [
+      "plant"
+    ],
+    "genderRate": 8,
+    "abilities": [
+      {
+        "name": "chlorophyll",
+        "hidden": false
+      },
+      {
+        "name": "hustle",
+        "hidden": false
+      },
+      {
+        "name": "leaf-guard",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 548
+  },
+  {
     "id": 550,
     "name": {
       "en": "basculin-red-striped",
@@ -18659,6 +20205,37 @@
     "baseFormId": 554
   },
   {
+    "id": 10176,
+    "name": {
+      "en": "darumaka-galar",
+      "fr": "Darumarond (G)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10176.png",
+    "types": [
+      "ice"
+    ],
+    "eggGroups": [
+      "ground"
+    ],
+    "genderRate": 4,
+    "abilities": [
+      {
+        "name": "hustle",
+        "hidden": false
+      },
+      {
+        "name": "inner-focus",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 10176
+  },
+  {
     "id": 555,
     "name": {
       "en": "darmanitan-standard",
@@ -18688,6 +20265,37 @@
     "isBreedable": true,
     "canBreedWithDitto": true,
     "baseFormId": 554
+  },
+  {
+    "id": 10177,
+    "name": {
+      "en": "darmanitan-galar-standard",
+      "fr": "Darumacho (G)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10177.png",
+    "types": [
+      "ice"
+    ],
+    "eggGroups": [
+      "ground"
+    ],
+    "genderRate": 4,
+    "abilities": [
+      {
+        "name": "gorilla-tactics",
+        "hidden": false
+      },
+      {
+        "name": "zen-mode",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 10176
   },
   {
     "id": 556,
@@ -18935,6 +20543,35 @@
     "isBreedable": true,
     "canBreedWithDitto": true,
     "baseFormId": 562
+  },
+  {
+    "id": 10179,
+    "name": {
+      "en": "yamask-galar",
+      "fr": "Tutafeh (G)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10179.png",
+    "types": [
+      "ground",
+      "ghost"
+    ],
+    "eggGroups": [
+      "mineral",
+      "indeterminate"
+    ],
+    "genderRate": 4,
+    "abilities": [
+      {
+        "name": "wandering-spirit",
+        "hidden": false
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 10179
   },
   {
     "id": 563,
@@ -19194,6 +20831,34 @@
     "baseFormId": 570
   },
   {
+    "id": 10238,
+    "name": {
+      "en": "zorua-hisui",
+      "fr": "Zorua (H)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10238.png",
+    "types": [
+      "normal",
+      "ghost"
+    ],
+    "eggGroups": [
+      "ground"
+    ],
+    "genderRate": 1,
+    "abilities": [
+      {
+        "name": "illusion",
+        "hidden": false
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 10238
+  },
+  {
     "id": 571,
     "name": {
       "en": "zoroark",
@@ -19219,6 +20884,34 @@
     "isBreedable": true,
     "canBreedWithDitto": true,
     "baseFormId": 570
+  },
+  {
+    "id": 10239,
+    "name": {
+      "en": "zoroark-hisui",
+      "fr": "Zoroark (H)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10239.png",
+    "types": [
+      "normal",
+      "ghost"
+    ],
+    "eggGroups": [
+      "ground"
+    ],
+    "genderRate": 1,
+    "abilities": [
+      {
+        "name": "illusion",
+        "hidden": false
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 10238
   },
   {
     "id": 572,
@@ -20837,6 +22530,35 @@
     "baseFormId": 618
   },
   {
+    "id": 10180,
+    "name": {
+      "en": "stunfisk-galar",
+      "fr": "Limonde (G)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10180.png",
+    "types": [
+      "ground",
+      "steel"
+    ],
+    "eggGroups": [
+      "water1",
+      "indeterminate"
+    ],
+    "genderRate": 4,
+    "abilities": [
+      {
+        "name": "mimicry",
+        "hidden": false
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 10180
+  },
+  {
     "id": 619,
     "name": {
       "en": "mienfoo",
@@ -21185,6 +22907,42 @@
       },
       {
         "name": "defiant",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 627
+  },
+  {
+    "id": 10240,
+    "name": {
+      "en": "braviary-hisui",
+      "fr": "Gueriaigle (H)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10240.png",
+    "types": [
+      "psychic",
+      "flying"
+    ],
+    "eggGroups": [
+      "flying"
+    ],
+    "genderRate": 0,
+    "abilities": [
+      {
+        "name": "keen-eye",
+        "hidden": false
+      },
+      {
+        "name": "sheer-force",
+        "hidden": false
+      },
+      {
+        "name": "tinted-lens",
         "hidden": true
       }
     ],
@@ -23678,6 +25436,42 @@
     "baseFormId": 704
   },
   {
+    "id": 10241,
+    "name": {
+      "en": "sliggoo-hisui",
+      "fr": "Colimucus (H)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10241.png",
+    "types": [
+      "steel",
+      "dragon"
+    ],
+    "eggGroups": [
+      "dragon"
+    ],
+    "genderRate": 4,
+    "abilities": [
+      {
+        "name": "sap-sipper",
+        "hidden": false
+      },
+      {
+        "name": "shell-armor",
+        "hidden": false
+      },
+      {
+        "name": "gooey",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 704
+  },
+  {
     "id": 706,
     "name": {
       "en": "goodra",
@@ -23698,6 +25492,42 @@
       },
       {
         "name": "hydration",
+        "hidden": false
+      },
+      {
+        "name": "gooey",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 704
+  },
+  {
+    "id": 10242,
+    "name": {
+      "en": "goodra-hisui",
+      "fr": "Muplodocus (H)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10242.png",
+    "types": [
+      "steel",
+      "dragon"
+    ],
+    "eggGroups": [
+      "dragon"
+    ],
+    "genderRate": 4,
+    "abilities": [
+      {
+        "name": "sap-sipper",
+        "hidden": false
+      },
+      {
+        "name": "shell-armor",
         "hidden": false
       },
       {
@@ -23944,6 +25774,43 @@
     "abilities": [
       {
         "name": "own-tempo",
+        "hidden": false
+      },
+      {
+        "name": "ice-body",
+        "hidden": false
+      },
+      {
+        "name": "sturdy",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 712
+  },
+  {
+    "id": 10243,
+    "name": {
+      "en": "avalugg-hisui",
+      "fr": "Séracrawl (H)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10243.png",
+    "types": [
+      "ice",
+      "rock"
+    ],
+    "eggGroups": [
+      "monster",
+      "mineral"
+    ],
+    "genderRate": 4,
+    "abilities": [
+      {
+        "name": "strong-jaw",
         "hidden": false
       },
       {
@@ -24289,6 +26156,38 @@
       },
       {
         "name": "long-reach",
+        "hidden": true
+      }
+    ],
+    "isBaby": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBreedable": true,
+    "canBreedWithDitto": true,
+    "baseFormId": 722
+  },
+  {
+    "id": 10244,
+    "name": {
+      "en": "decidueye-hisui",
+      "fr": "Archéduc (H)"
+    },
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10244.png",
+    "types": [
+      "grass",
+      "fighting"
+    ],
+    "eggGroups": [
+      "flying"
+    ],
+    "genderRate": 1,
+    "abilities": [
+      {
+        "name": "overgrow",
+        "hidden": false
+      },
+      {
+        "name": "scrappy",
         "hidden": true
       }
     ],
@@ -30105,7 +32004,7 @@
     "isMythical": false,
     "isBreedable": true,
     "canBreedWithDitto": true,
-    "baseFormId": 215
+    "baseFormId": 10235
   },
   {
     "id": 904,
@@ -30141,7 +32040,7 @@
     "isMythical": false,
     "isBreedable": true,
     "canBreedWithDitto": true,
-    "baseFormId": 211
+    "baseFormId": 10234
   },
   {
     "id": 905,
@@ -32677,7 +34576,7 @@
     "isMythical": false,
     "isBreedable": true,
     "canBreedWithDitto": true,
-    "baseFormId": 194
+    "baseFormId": 10253
   },
   {
     "id": 981,
