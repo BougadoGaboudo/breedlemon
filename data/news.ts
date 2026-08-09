@@ -6,6 +6,12 @@ type News = {
 
 export const news: News[] = [
   {
+    value: "item",
+    title: "Update UX : Item IV",
+    description:
+      "Vous n'êtes désormais plus obligé de sélectionner un item IV pour vos Pokémon. Vous pouvez simplement renseigner toutes les infos des deux parents puis l'item IV sera automatiquement calculé et ajouté pour vous !",
+  },
+  {
     value: "region",
     title: "Formes régionales",
     description: [
