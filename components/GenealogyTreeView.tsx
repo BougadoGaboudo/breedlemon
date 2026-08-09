@@ -19,6 +19,7 @@ import { useTreeBreed } from "@/hooks/useTreeBreed";
 import { InventoryCardModal } from "./InventoryCardModal";
 import { ModalOverlay } from "./ModalOverlay";
 import { TreeControls } from "./TreeControls";
+import { useAutoHeldItems } from "@/hooks/useAutoHeldItem";
 
 const NODE_WIDTH = 300;
 const NODE_HEIGHT = 140;
@@ -31,6 +32,7 @@ export function GenealogyTreeView({ allSpecies }: { allSpecies: PokemonSpecies[]
   const setTargetIvCount = useGenealogyTreeStore((s) => s.setTargetIvCount);
   const assignSlot = useGenealogyTreeStore((s) => s.assignSlot);
   const entries = useInventoryStore((s) => s.entries);
+  const updateEntry = useInventoryStore((s) => s.updateEntry);
   const addEntry = useInventoryStore((s) => s.addEntry);
   const pairingStatus = useGenealogyTreeStore((s) => s.pairingStatus);
   const setPairingStatus = useGenealogyTreeStore((s) => s.setPairingStatus);
@@ -42,6 +44,8 @@ export function GenealogyTreeView({ allSpecies }: { allSpecies: PokemonSpecies[]
   const currentSlotEntryId = selectedSlot
     ? tree[selectedSlot.genIndex][selectedSlot.slotIndex].inventoryEntryId
     : undefined;
+
+  useAutoHeldItems(tree, entries, updateEntry);
 
   const { nodes, edges } = useMemo(() => {
     const rawNodes: { id: string; width: number; height: number; genIndex: number; slotIndex: number }[] = [];
