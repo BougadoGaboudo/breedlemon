@@ -114,7 +114,7 @@ export function GenealogyTreeView({ allSpecies }: { allSpecies: PokemonSpecies[]
         orientation={orientation}
         onOrientationChange={setOrientation}
       />
-      <Canvas worldWidth={worldWidth} worldHeight={worldHeight}>
+      <Canvas key={`${targetIvCount}-${orientation}`} worldWidth={worldWidth} worldHeight={worldHeight}>
         <CanvasEdges edges={edges} nodesById={nodesById} orientation={orientation} />
         {nodes.map((node) => {
           const slot = tree[node.genIndex][node.slotIndex];

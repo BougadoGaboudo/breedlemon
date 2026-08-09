@@ -33,13 +33,13 @@ export function Canvas({ children, worldWidth, worldHeight }: CanvasProps) {
       </div>
 
       <div style={{ position: "absolute", bottom: 16, right: 16, display: "flex", gap: 8 }}>
-        <button type="button" onClick={zoomIn}>
+        <button type="button" onClick={zoomIn} className="cursor-pointer">
           +
         </button>
-        <button type="button" onClick={zoomOut}>
+        <button type="button" onClick={zoomOut} className="cursor-pointer">
           −
         </button>
-        <button type="button" onClick={reset}>
+        <button type="button" onClick={reset} className="cursor-pointer">
           Reset
         </button>
       </div>

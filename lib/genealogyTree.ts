@@ -135,8 +135,10 @@ export function getEligibleEntriesForSlot(
   allSpecies: PokemonSpecies[],
 ): InventoryEntry[] {
   const currentEntry = inventory.find((e) => e.id === tree[genIndex][slotIndex]?.inventoryEntryId);
-  const withCurrent = (list: InventoryEntry[]) =>
-    currentEntry && !list.some((e) => e.id === currentEntry.id) ? [currentEntry, ...list] : list;
+  const withCurrent = (list: InventoryEntry[]) => {
+    if (!currentEntry) return list;
+    return [currentEntry, ...list.filter((e) => e.id !== currentEntry.id)];
+  };
 
   const targetSpecies = getTargetChildSpecies(tree, genIndex, slotIndex, inventory, allSpecies);
   const targetBaseFormId = targetSpecies ? resolveBaseForm(targetSpecies, allSpecies) : null;
