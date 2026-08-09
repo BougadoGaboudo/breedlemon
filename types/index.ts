@@ -9,6 +9,7 @@ export type ParentPokemon = {
   ivs: IVs;
   fertility: number;
   heldItemStat?: Stat;
+  heldItemIvsSnapshot?: string;
   hasHiddenAbility?: boolean;
 };
 

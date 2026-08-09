@@ -11,8 +11,16 @@ function isIvComplete(entry: InventoryEntry): boolean {
   return speciesId !== undefined && gender !== undefined && stats.some((s) => ivs[s] === maxIV);
 }
 
+export function ivsSnapshotKey(ivs: ParentPokemonDraft["ivs"]): string {
+  return stats.map((s) => ivs[s]).join(",");
+}
+
 function findUniqueMaxStat(self: ParentPokemonDraft["ivs"], other: ParentPokemonDraft["ivs"]) {
   return stats.find((s) => self[s] === maxIV && other[s] !== maxIV);
+}
+
+function needsRecompute(entry: InventoryEntry): boolean {
+  return entry.draft.heldItemIvsSnapshot !== ivsSnapshotKey(entry.draft.ivs);
 }
 
 export function useAutoHeldItems(
@@ -34,14 +42,22 @@ export function useAutoHeldItems(
         if (!entryA || !entryB) continue;
         if (!isIvComplete(entryA) || !isIvComplete(entryB)) continue;
 
-        if (entryA.draft.heldItemStat === undefined) {
+        if (needsRecompute(entryA)) {
           const stat = findUniqueMaxStat(entryA.draft.ivs, entryB.draft.ivs);
-          if (stat) updateEntry(entryA.id, { ...entryA.draft, heldItemStat: stat });
+          updateEntry(entryA.id, {
+            ...entryA.draft,
+            heldItemStat: stat,
+            heldItemIvsSnapshot: ivsSnapshotKey(entryA.draft.ivs),
+          });
         }
 
-        if (entryB.draft.heldItemStat === undefined) {
+        if (needsRecompute(entryB)) {
           const stat = findUniqueMaxStat(entryB.draft.ivs, entryA.draft.ivs);
-          if (stat) updateEntry(entryB.id, { ...entryB.draft, heldItemStat: stat });
+          updateEntry(entryB.id, {
+            ...entryB.draft,
+            heldItemStat: stat,
+            heldItemIvsSnapshot: ivsSnapshotKey(entryB.draft.ivs),
+          });
         }
       }
     }

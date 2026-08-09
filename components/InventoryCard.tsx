@@ -13,6 +13,7 @@ import { useGenealogyTreeStore } from "@/stores/genealogyTreeStore";
 import PrimaryButton from "./PrimaryButton";
 import { useThemeStore } from "@/stores/themeStore";
 import { SpeciesCombobox } from "./SpeciesCombobox";
+import { ivsSnapshotKey } from "@/hooks/useAutoHeldItem";
 
 type InventoryCardProps = {
   entry: InventoryEntry;
@@ -146,7 +147,12 @@ export function InventoryCard({
           }))}
           placeholder="Choisir"
           clearLabel="Aucun item"
-          onChange={(stat) => update({ heldItemStat: stat })}
+          onChange={(stat) =>
+            update({
+              heldItemStat: stat,
+              heldItemIvsSnapshot: ivsSnapshotKey(entry.draft.ivs),
+            })
+          }
         />
       </div>
 
